@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Weather App</h1>
+        <div class="card">
+                <form>
+                    <input type="search" id="search">
+                    <button onclick="getWeather()">Search</button>
+                </form>
+            <div class="row" id="info">
+                    <img src="//cdn.weatherapi.com/weather/64x64/night/143.png" alt="">
+                    <h1> 21&deg;C</h1>
+                <div class="info" id="weather">
+                    <h2>wardha</h2>
+                    <h4>(maharashtra,india)</h4>
+                    <h3>Clear</h3>
+                    <h3>humidity : 56</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
