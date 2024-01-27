@@ -13,13 +13,32 @@ const text = [
 const input = document.querySelector('input');
 const contentBox = document.querySelector('#paragraphs')
 
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex > 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
+
 const generatePara = () => {
     if(isNaN(input.value) || 0 > input.value || 10 < input.value) {
         const randomNum = Math.floor(Math.random() * 9);
         contentBox.innerHTML = `
         <p>${text[randomNum]} </p>`
     } else {
-        const data = text.slice(0, input.value);
+        const localText = shuffle(text);
+        const data = localText.slice(0, input.value);
         const paras = data.map((p) => {
             return `<p>${p}</p>`
         })
