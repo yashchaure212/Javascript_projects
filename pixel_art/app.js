@@ -9,6 +9,8 @@ let paintBtn = document.getElementById("paint-btn");
 let widthValue = document.getElementById("width-value");
 let heightValue = document.getElementById("height-value");
 
+// these objects maps diff type of mouse and touch events.
+
 let events = {
        mouse: {
         down: "mousedown",
@@ -22,7 +24,10 @@ let events = {
        }
 };
 
+
+//stored which type of input divice being used 
 let deviceType = "";
+
 let draw = false;
 let erase = false;
 
@@ -36,22 +41,26 @@ const isTouchDevice = () => {
         return false;
     }
  };
-
  isTouchDevice();
+
+
 
 gridButton.addEventListener("click", () => {
     container.innerHTML = "";
     let count = 0;
-    for(let i = 0; i < gridHeight.value; i++) {
+    for(let i = 0; i < gridWidth.value; i++) {
         count += 2;
         let div = document.createElement("div");
         div.classList.add("gridRow");
 
-        for (let j = 0; j < gridWidth.value; j++) {
+        for (let j = 0; j < gridHeight.value; j++) {
             count += 2;
+            console.log(count);
             let col = document.createElement("div");
             col.classList.add("gridCol");
             col.setAttribute("id", `gridCol${count}`);
+            
+            //when touch or mouse event start.
             col.addEventListener(events[deviceType].down, () => {
                 draw = true;
                 if(erase) {
@@ -61,6 +70,7 @@ gridButton.addEventListener("click", () => {
                 }
             });
 
+            //when touch or mouse event move / attached.
             col.addEventListener(events[deviceType].move, (e) => {
                 let  elementId =  document.elementFromPoint(
                     !isTouchDevice() ? e.clientX : e.touches[0].clientX,
@@ -69,17 +79,18 @@ gridButton.addEventListener("click", () => {
                 checker(elementId);
             });
 
+            //when touch or mouse event detached / removed.
             col.addEventListener(events[deviceType].up, () => {
                 draw = false;
             });
 
             div.appendChild(col);
         }
-
         container.appendChild(div);
     }
-    
 });
+
+
 
 function checker (elementId) {
     let gridColumns = document.querySelectorAll(".gridCol");
@@ -93,6 +104,8 @@ function checker (elementId) {
         }
     });
 }
+
+
 
 ClearGridButton.addEventListener("click", () => {
    container.innerHTML = "";
