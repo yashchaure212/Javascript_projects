@@ -1,0 +1,222 @@
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    background-color: #FAF7F0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 20px 50px;
+    height: 50%;
+    width: 60%;
+    background-color: #CDFCF6;
+    border: 1px solid #98A8F8;
+    border-radius: 10px;
+}
+.top{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.top i{
+    font-size: 40px;
+    color: #98A8F8;
+}
+.top input{
+    height: 40px;
+    width: 70%;
+    font-size: 20px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    border: 1px solid #98A8F8;
+    outline: #98A8F8;
+}
+.top button{
+    font-size: 20px;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: #98A8F8;
+    color: #fff;
+}
+.bottom{
+    position: relative;
+    background-color: #98A8F8;
+    margin-top: 50px;
+    padding: 20px 30px;
+    padding-top: 70px;
+    border-radius: 20px;
+    height: 70%;
+    width: 100%;
+    overflow-y: scroll;
+}
+.bottom::-webkit-scrollbar{
+background-color: #98A8F8;
+width: 15px;
+}
+.bottom::-webkit-scrollbar-thumb{
+    background-color: #666;
+    border-radius: 20px;
+    width: 20px;
+}
+.bottom::-webkit-scrollbar-track{
+    background-color: #98A8F8;
+    width: 20px;
+}
+.bottom i{
+    position: fixed;
+    font-size: 20px;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 20px;
+    color: #222;
+    right: 80px;
+    top: 160px;
+    color: #fff;
+}
+.bottom i:hover{
+    color: #666;
+    border: 1px solid #666;
+}
+.bottom h2{
+    font-size: 25px;
+    color: #fff;
+}
+h4{
+    z-index: 9;
+    position: absolute;
+    right: 45px;
+    top: 200px;
+    background-color: #2222229d;
+    height: 30px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    padding: 2px 2px 0px 2px; 
+    width: 100px;
+    font-size: 17px;
+    font-weight: 600;
+}
+#hover-text{
+    display: none;
+    transition: 1s all ease-in-out;
+}
+
+@media (max-width :480px) {
+    .container {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        padding: 20px 20px;
+        height: 100%;
+        width: 100%;
+        background-color: #CDFCF6;
+        border: 1px solid #98A8F8;
+        border-radius: 10px;
+    }
+    .top{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .top i{
+        font-size: 30px;
+        color: #98A8F8;
+    }
+    .top input{
+        height: 30px;
+        width: 80%;
+        font-size: 15px;
+        padding: 2px 10px;
+        border-radius: 10px;
+        border: 1px solid #98A8F8;
+        outline: #98A8F8;
+    }
+    .top button{
+        font-size: 15px;
+        height: 30px;
+        width: 80px;
+        border-radius: 10px;
+        background-color: #98A8F8;
+        color: #fff;
+    }
+    .bottom{
+        position: relative;
+        background-color: #98A8F8;
+        margin-top: 50px;
+        padding: 20px 30px;
+        padding-top: 70px;
+        border-radius: 20px;
+        height: 70%;
+        width: 100%;
+        overflow-y: scroll;
+    }
+    .bottom::-webkit-scrollbar{
+        background-color: #98A8F8;
+        width: 15px;
+    }
+    .bottom::-webkit-scrollbar-thumb{
+        background-color: #666;
+        border-radius: 20px;
+        width: 20px;
+    }
+    .bottom::-webkit-scrollbar-track{
+        background-color: #98A8F8;
+        width: 20px;
+    }
+    .bottom i{
+        position: fixed;
+        font-size: 15px;
+        border: 1px solid #fff;
+        padding: 5px;
+        border-radius: 20px;
+        color: #222;
+        right: 30px;
+        top: 160px;
+        color: #fff;
+    }
+    .bottom i:hover{
+        color: #666;
+        border: 1px solid #666;
+    }
+    .bottom h2{
+        font-size: 20px;
+        color: #fff;
+    }
+    h4{
+        z-index: 9;
+        position: absolute;
+        right: 45px;
+        top: 200px;
+        background-color: #2222229d;
+        height: 30px;
+        border-radius: 5px;
+        color: #fff;
+        text-align: center;
+        padding: 2px 2px 0px 2px; 
+        width: 100px;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    #hover-text{
+        display: none;
+        transition: 1s all ease-in-out;
+    }
+    
+}

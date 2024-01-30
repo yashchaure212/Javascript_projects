@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass The Massage</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <i class="ri-edit-fill"></i>
+            <input type="text" id="text-input"> 
+            <button id="submitBtn" onclick="SubmitText()">Submit</button>
+        </div>
+        <div class="bottom">
+                <i id="copyBtn" class="ri-clipboard-line" onmouseenter="showText()" onmouseleave="hideText()"></i>
+                <h2 id="bottom-text">Enter the text and press the submit botton</h2>
+        </div>
+        <h4 id="hover-text">copy text</h4>
+
+    </div>
+     
+
+    <script src="app.js"></script>
+</body>
+</html>
+
